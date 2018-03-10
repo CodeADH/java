@@ -1,0 +1,28 @@
+class Fibosum 
+{
+	public static void main(String[] args) 
+	{
+		int fibo[] = new int [4000000];
+		int i = 2;
+		long sum = 0;
+		fibo[0]=0;
+		fibo[1]=1;
+		//System.out.println(fibo[i]);
+		do
+		{
+
+			fibo[i]= fibo[i-1] + fibo[i-2];
+			
+			if (fibo[i]%2 ==0)
+			{
+			sum+=fibo[i];
+			}		
+
+		//System.out.println(fibo[i]);
+		i++;
+		}while(fibo[i-1] <= 4000000);
+		
+		System.out.println("sum of even fibo numbers < 4M is " + sum);
+	}
+}
+

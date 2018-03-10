@@ -1,0 +1,17 @@
+﻿	
+int max = 0;
+int[] d = {1,20,21,-19};
+
+for(i = 0; i < 400; i++){						
+	for(int diff : d){
+		int prod = 1;
+		try{
+			for(int k = 0; k < 4; k++){
+				int pos = i + k*diff;
+				prod *= matrix[pos/20][pos % 20];
+			}
+			max = Math.max(max, prod);
+		} catch (Exception e) {}
+	}
+}
+System.out.println(max);
